@@ -7,9 +7,10 @@ pipeline {
             steps {
                 echo "Executing build"
 		sh 'java -version'
-		cd src
+		dir('src'){
 		javac HelloWorld.java
 		java HelloWorld
+		}
 		
             }
         }
